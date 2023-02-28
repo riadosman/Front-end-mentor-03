@@ -1,0 +1,234 @@
+*{
+    margin: 0;
+    padding:0;
+    font-family: 'Hanken Grotesk', sans-serif;
+}
+:root{
+    --li:repeating-linear-gradient(45deg,blue ,red);
+    --White:hsl(0, 0%, 100%);
+    --p-blue: hsl(221, 100%, 96%);
+    --l-lavender:hsl(241, 100%, 89%);
+    --d-g-blue:hsl(224, 30%, 27%);
+    --bg-1:hsl(252, 100%, 67%);
+    --bg-2:hsl(241, 81%, 54%);
+    --circle-1:hsla(256, 72%, 46%, 1);
+    --circle-2:hsla(241, 72%, 46%, 0);
+    --l-red:hsl(0, 100%, 67%);
+    --Orangey-yellow: hsl(39, 100%, 56%);
+    --Green-teal: hsl(166, 100%, 37%);
+    --Cobalt-blue: hsl(234, 85%, 45%);
+}
+p{
+    font-weight:700 ;
+    font-size: 18px;
+}
+body{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.Card{
+    background-color: var(--White);
+    box-shadow: 22px 10px 89px 1px var(--l-lavender);
+    width: 500px;
+    height: 350px;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.left-section{
+    position: relative;
+    background:linear-gradient(var(--bg-1),var(--bg-2));
+    height: 100%;
+    width: 50%; 
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+}
+.left-section .des{
+    left: 0; 
+    position: absolute; 
+    color: var(--l-lavender); 
+    top: 68%; 
+    font-size: 14px; margin: 25px; 
+    text-align: center;
+}
+.left-section p{
+    margin-top: 17px;
+    color: var(--l-lavender);
+}
+.circle{
+    background:linear-gradient(var(--circle-1),var(--circle-2));
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    position: absolute;
+    transform: translate(0%, 39%);
+}
+.content h2{
+    position: absolute; 
+    left: 38%;
+    top: 64%;
+    color: var(--White); 
+}
+.circle h1{
+    text-align: center;
+    margin-top: 35px;
+    color: var(--White);
+    font-size: 46px;
+    font-weight: 800;
+}
+.circle h4{
+    opacity: 0.6;
+    text-align: center;
+    color: var(--White);
+}
+.right-section{
+   height: 100%;
+    width: 50%;
+    border-radius: 30px;
+    display: flex;
+    position: relative;
+}
+.right-section h2{
+   font-size: 18px;
+}
+.right-section-container{
+    padding: 15px;
+}
+.option{
+    border-radius: 5px;
+    padding: 3px;
+    width: 200px;
+    height: 35px;
+    display: flex;
+    margin-top: 15px;
+    align-items: center;
+}
+.reaction{
+    background-color: hsl(0, 100%, 67%,0.1);
+}
+.memory{
+    background-color: hsl(39, 100%, 56%,0.1);
+}
+.verbal{
+    background-color: hsl(166, 100%, 37%,0.1);
+}
+.visual{
+    background-color: hsl(234, 85%, 45%,0.1);
+}
+.Option-1,
+.Option-2,
+.Option-3,
+.Option-4{
+    font-size: 18px;
+    margin-left: 5px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+h3{
+    font-size: 16px;
+}
+.Option-1 h3{
+    color: var(--l-red);
+}
+.Option-2 h3{
+    color: var(--Orangey-yellow);
+}
+.Option-3 h3{
+    color: var(--Green-teal);
+}
+.Option-4 h3{
+    color: var(--Cobalt-blue);
+}
+span{
+    font-weight:100;
+    color: var(--d-g-blue);
+    margin-left: 1px;
+}
+button{
+    background-color: var(--d-g-blue);
+    color: var(--White);
+    width: 100%;
+    margin-top: 25px;
+    padding: 3px;
+    border: none;
+    border-radius: 25px;
+    height: 45px;
+}
+  .left-section .des {
+    left: 0; 
+    position: absolute; 
+    color: var(--l-lavender); 
+    top: 68%; 
+    font-size: 14px; margin: 25px; 
+    text-align: center;
+}
+button:hover{
+    background:linear-gradient(var(--bg-1),var(--bg-2));
+}
+@media (min-width:320px) and (max-width: 600px) {
+    body{
+        height: 100%;
+        width: 100%;
+        display: inline-block;
+    }
+    .Card{
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        border-radius: 0px;
+    }
+    .left-section{
+        /* position: relative; */
+        min-height: 50%;
+        min-width: 100%; 
+        border-radius: 0;
+        border-bottom-left-radius: 30px;
+        border-bottom-right-radius: 30px;
+        display: flex;
+        /* justify-content: center; */
+    }
+    .left-section .des{
+        left: calc(calc(100% - 380px) / 2);
+        position: absolute;
+        top: 70%;
+        font-size: 19px;
+        margin: 25px;
+        text-align: center;
+        max-width: 315px;
+    }
+    .content h2 {
+        left: 41%;
+    }
+    .right-section-container{
+        min-width: 100%;
+        position: relative;
+        left: 0%;
+    }
+    .right-section{
+        left: -23%;
+        right: 10px;
+    }
+    .option{
+        border-radius: 5px;
+        padding: 5px;
+        min-width: 100%;
+        height: 44px;
+        display: flex;
+        border-radius: 11px;
+        margin-top: 15px;
+        align-items: center;
+        width: 340px;
+    }
+    button{
+        width: 350px;
+        height: 50px;
+    }
+}
